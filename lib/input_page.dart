@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+const double bottomContainerHeight = 80.0;
+const Color reusableCardColor = Color(0xFF1E1F32);
+const Color bottomContainerColor = Color(0xFF93F3DE);
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -17,20 +21,30 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ReusableCard(color: Color(0xFF1E1F32))),
-                Expanded(child: ReusableCard(color: Color(0xFF1E1F32))),
+                Expanded(child: ReusableCard(color: reusableCardColor)),
+                Expanded(child: ReusableCard(color: reusableCardColor)),
               ],
             ),
           ),
-          Expanded(child: ReusableCard(color: Color(0xFF1E1F32))),
+          Expanded(child: ReusableCard(color: reusableCardColor)),
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ReusableCard(color: Color(0xFF1E1F32))),
-                Expanded(child: ReusableCard(color: Color(0xFF1E1F32))),
+                Expanded(child: ReusableCard(color: reusableCardColor)),
+                Expanded(child: ReusableCard(color: reusableCardColor)),
               ],
             ),
           ),
+          Container(
+            color: bottomContainerColor,
+            width: double.infinity,
+            height: bottomContainerHeight,
+            margin: EdgeInsets.only(top: 10.0),
+          ),
+          // FilledButton(
+          //   onPressed: () {},
+          //   child: Text('Calculate'),
+          // )
         ],
       ),
     );
